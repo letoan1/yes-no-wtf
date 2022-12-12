@@ -1,0 +1,48 @@
+#table-confirm {
+    margin-top: 50px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    & td,
+    & th {
+        border: 1px solid #000;
+        text-align: left;
+        padding: 8px;
+        text-align: center;
+    }
+
+    & th {
+        width: 150px;
+    }
+}
+
+.btn-add-more {
+    width: 42%;
+    margin-top: 20px;
+    padding: 10px 30px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(144, 144, 144);
+    border: none;
+    color: #fff;
+}
+
+.round {
+    margin-left: 29%;
+
+    & h5 {
+        margin-bottom: 5px;
+        font-size: 21px;
+        font-weight: normal;
+    }
+
+    & .input-round {
+        padding: 10px;
+        width: 40%;
+    }
+
+    & .btn-obtain {
+        padding: 10px;
+        width: 15%;
+    }
+}
