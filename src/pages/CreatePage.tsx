@@ -21,7 +21,7 @@ const CreatePage: React.FC<Props> = (props) => {
             setPlayers((prev) => [
                 ...prev,
                 {
-                    id: players.length,
+                    id: players.length + 1,
                     name,
                     createdAt: format(new Date(), 'dd/MM/yyyy p'),
                     answers: [],

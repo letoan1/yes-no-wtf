@@ -30,10 +30,14 @@ const ConfirmPage: React.FC<Props> = (props) => {
     };
 
     useEffect(() => {
-        if (players.length !== 2) {
+        console.log(players);
+
+        if (players.length === 2) {
+            setDisabled(false);
+        } else {
             setDisabled(true);
         }
-    }, [players.length]);
+    }, [players.length, players]);
 
     return (
         <div className="confirm-page container">
@@ -65,7 +69,7 @@ const ConfirmPage: React.FC<Props> = (props) => {
                         ))}
                 </tbody>
             </table>
-            {players.length !== 2 && (
+            {players.length < 2 && (
                 <Link to="/create-page">
                     <button className=" btn-add-more">Add More Player</button>
                 </Link>
