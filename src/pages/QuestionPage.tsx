@@ -20,7 +20,7 @@ const QuestionPage: React.FC<Props> = (props) => {
     const submitAnswer = () => {
         if (turn === 0) {
             setTurn(1);
-            setAnswerList(players[0].answers ?? Array(round).fill('EMPTY'));
+            setAnswerList( Array(round).fill('EMPTY'));
             window.localStorage.setItem('players', JSON.stringify(players));
             window.localStorage.setItem('turn', JSON.stringify(1));
         } else {
