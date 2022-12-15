@@ -78,13 +78,14 @@ const ResultPage: React.FC<Props> = (props) => {
 
     useEffect(() => {
         setSearchArr(playerResult);
-        if (playerResult[0].score > playerResult[1].score) {
+        if (playerResult[0]?.score > playerResult[1]?.score) {
             setWinner(`The winner is: ${playerResult[0].name}`);
-        } else if (playerResult[0].score < playerResult[1].score) {
+        } else if (playerResult[0]?.score < playerResult[1]?.score) {
             setWinner(`The winner is: ${playerResult[1].name}`);
         } else {
             setWinner(`This match is drawn!`);
         }
+
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 

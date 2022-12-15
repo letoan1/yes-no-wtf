@@ -30,14 +30,12 @@ const ConfirmPage: React.FC<Props> = (props) => {
     };
 
     useEffect(() => {
-        console.log(players);
-
         if (players.length === 2) {
             setDisabled(false);
         } else {
             setDisabled(true);
         }
-    }, [players.length, players]);
+    }, [players.length]);
 
     return (
         <div className="confirm-page container">

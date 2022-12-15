@@ -37,7 +37,7 @@ function App() {
                 path="/answer-page"
                 element={<AnswerPage round={round} players={players} setPlayers={setPlayers} />}
             />
-            <Route path="/result-page" element={<ResultPage players={players}  />} />
+            <Route path="/result-page" element={<ResultPage players={players} />} />
         </Routes>
     );
 }
