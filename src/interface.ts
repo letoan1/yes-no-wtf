@@ -5,4 +5,5 @@ export interface Players {
     answers: string[];
     results: string[];
     score?: number;
+    correctPercent?: number;
 }

@@ -13,7 +13,7 @@ import './sass/app.scss';
 
 function App() {
     const [players, setPlayers] = useState<Players[]>(JSON.parse(`${window.localStorage.getItem('players')}`) ?? []);
-    const [round, setRound] = useState<number>(0);
+    const [round, setRound] = useState<number>(JSON.parse(`${window.localStorage.getItem('round')}`) ?? 0);
 
     useEffect(() => {
         window.localStorage.setItem('players', JSON.stringify(players));
@@ -37,7 +37,7 @@ function App() {
                 path="/answer-page"
                 element={<AnswerPage round={round} players={players} setPlayers={setPlayers} />}
             />
-            <Route path="/result-page" element={<ResultPage players={players} />} />
+            <Route path="/result-page" element={<ResultPage players={players}  />} />
         </Routes>
     );
 }
